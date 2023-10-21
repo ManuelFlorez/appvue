@@ -6,7 +6,8 @@ import Button from 'primevue/button'
 // defineProps<{ msg: string }>()
 
 const count = ref(0)
-const countMessage = () => `contador de tareas: ${count.value}`
+const countMessage = () => `contador de tareas: ${count.value}` 
+
 const cardSubTitle = `Organizador`
 const iconcheck = `pi pi-check`
 
@@ -21,17 +22,22 @@ defineExpose({
 
 <template>
   <Card class="card">
+
     <template #title>
       Home
+      <i id= "brujula" class="pi pi-compass"></i>
       <i v-if="isSpinner" id="load" class="pi pi-spin pi-spinner"></i>
       <i v-if="!isSpinner" id="load" class="pi pi-mobile"></i>
     </template>
     <template #subtitle>{{ cardSubTitle }}</template>
     <template #content>
       <Button :label="countMessage()" :icon="iconcheck" @click="count++" />
+      <button @click="count++" >mi boton</button>
       <div>
         <p>
-          El organizador encargado de llevar un registro y control de sucesos al día.
+          
+
+          {{ new Date().toString() }}
         </p>
       </div>
 
@@ -63,5 +69,9 @@ defineExpose({
 #load {
   margin-left: 65%;
   font-size: 2rem;
-}
+} 
+ #brujula {
+   margin: lef 3%;
+   font-size: 2rem;
+ }
 </style>
