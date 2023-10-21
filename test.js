@@ -20,3 +20,5 @@ function nuvmayor(n1,n2){ // > mayor que, < menor que, >= mayor o igual, <= meno
 resultado = nuvmayor(8, 9)
 
 console.log(`El número mayor es: ${resultado}`)
+
+var mifuncion=(false);
